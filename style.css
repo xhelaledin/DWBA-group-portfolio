@@ -1,49 +1,60 @@
+/* Google Fonts preconnect + Montserrat */
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Simple Icons */
+@import url("https://cdn.jsdelivr.net/npm/simple-icons-font@v8/font/simple-icons.min.css");
+
 /* --- Global Styles & Dark Theme --- */
 :root {
-    --bg-color: #121212;
-    --surface-color: #1E1E1E;
-    --primary-color: #4A90E2;
-    --primary-hover: #7BB9FF;
-    --text-primary: #E0E0E0;
-    --text-secondary: #AAAAAA;
-    --border-color: #333333;
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --primary-color: #4a90e2;
+  --primary-hover: #7bb9ff;
+  --text-primary: #e0e0e0;
+  --text-secondary: #aaaaaa;
+  --border-color: #333333;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    line-height: 1.7;
-    /* Added from reference for font */
-    font-family: 'Montserrat', Arial, sans-serif;
-    background: linear-gradient(135deg, #181818 0%, #232323 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.7;
+  /* Added from reference for font */
+  font-family: "Montserrat", Arial, sans-serif;
+  background: linear-gradient(135deg, #181818 0%, #232323 100%);
 }
 
-h1, h2, h3 {
-    color: #FFFFFF;
-    margin-top: 0;
+h1,
+h2,
+h3 {
+  color: #ffffff;
+  margin-top: 0;
 }
 
 a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--primary-hover);
+  color: var(--primary-hover);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 p {
@@ -54,90 +65,90 @@ p {
 
 /* --- Header & Glassmorphism Navigation --- */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100; /* Needs to be above portfolio cards */
-    width: 100%;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(29, 29, 31, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Needs to be above portfolio cards */
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(29, 29, 31, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
 }
 
 header h1 {
-    margin: 0;
-    font-size: 1.8em;
+  margin: 0;
+  font-size: 1.8em;
 }
 
 header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
 }
 
 header nav ul li {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 header nav ul li a {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    font-size: 1.1em;
-    padding-bottom: 5px;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1.1em;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 header nav ul li a.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 /* --- Main Content Card --- */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background-color: var(--surface-color);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 main {
-    padding: 40px;
+  padding: 40px;
 }
 
 main h2 {
-    font-size: 2.2em;
-    border-bottom: 3px solid var(--primary-color);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+  font-size: 2.2em;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 /* --- Profile "About" Section --- */
 .profile-grid {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 40px;
-    align-items: start;
-    margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 3rem;
 }
 
 .profile-pic {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 50%;
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
 }
 
 /* Social Links from Reference */
@@ -162,7 +173,7 @@ main h2 {
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s, color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .about-link i {
@@ -180,45 +191,47 @@ main h2 {
 
 /* --- REQUIREMENT: Table (Dark Mode) --- */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
 table th,
 table td {
-    border-bottom: 1px solid var(--border-color);
-    padding: 14px;
-    text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px;
+  text-align: left;
 }
 
 table th {
-    background-color: var(--primary-color);
-    color: #FFFFFF;
-    font-size: 1.1em;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 1.1em;
 }
 
 table tbody tr {
-    background-color: #2C2C2C;
-    transition: background-color 0.2s ease;
+  background-color: #2c2c2c;
+  transition: background-color 0.2s ease;
 }
 
 table tbody tr:nth-child(even) {
-    background-color: var(--surface-color);
+  background-color: var(--surface-color);
 }
 
 table tbody tr:hover {
-    background-color: #383838;
+  background-color: #383838;
 }
-
 
 /* --- Projects Section (From Reference) --- */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Adjusted min-width */
   gap: 2.5rem;
   margin-top: 2rem;
 }
@@ -230,7 +243,7 @@ table tbody tr:hover {
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -261,8 +274,11 @@ table tbody tr:hover {
 
 .portfolio-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.55);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
   color: #fff;
   display: flex;
   align-items: center;
@@ -347,7 +363,7 @@ table tbody tr:hover {
   align-items: center;
   gap: 1.1rem;
   min-width: 180px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
@@ -366,46 +382,46 @@ table tbody tr:hover {
 
 /* --- Footer --- */
 footer {
-    text-align: center;
-    padding: 30px;
-    margin-top: 40px;
-    color: var(--text-secondary);
-    border-top: 1px solid var(--border-color);
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
 }
 
 /* --- Responsive Media Queries --- */
 @media (max-width: 768px) {
-    .profile-grid {
-        grid-template-columns: 1fr; /* Stack profile pic on top */
-    }
+  .profile-grid {
+    grid-template-columns: 1fr; /* Stack profile pic on top */
+  }
 
-    .profile-pic {
-        max-width: 250px;
-        margin: 0 auto 20px auto; /* Center the profile pic */
-        display: block;
-    }
+  .profile-pic {
+    max-width: 250px;
+    margin: 0 auto 20px auto; /* Center the profile pic */
+    display: block;
+  }
 
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
 
-    header nav ul {
-        justify-content: center;
-        width: 100%;
-    }
+  header nav ul {
+    justify-content: center;
+    width: 100%;
+  }
 
-    header nav ul li {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+  header nav ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-    main {
-        padding: 25px;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
+  main {
+    padding: 25px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
