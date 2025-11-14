@@ -1,0 +1,143 @@
+/* -------------------------------------------------
+   Google Fonts & Icons
+--------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/simple-icons-font@v8/font/simple-icons.min.css");
+
+/* -------------------------------------------------
+   Theme Variables
+--------------------------------------------------- */
+:root {
+  --bg: #121212;
+  --surface: #1c1c1c;
+  --accent: #4a90e2;
+  --accent-hover: #7bb9ff;
+  --text-main: #e8e8e8;
+  --text-muted: #aaaaaa;
+  --border: #2c2c2c;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* -------------------------------------------------
+   Base
+--------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #181818, #232323);
+  color: var(--text-main);
+  line-height: 1.7;
+  padding-top: 70px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.3em;
+}
+
+/* -------------------------------------------------
+   Header (Glass Nav)
+--------------------------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 6%;
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header h1 a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: var(--text-main);
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* -------------------------------------------------
+   Shared Container Style
+--------------------------------------------------- */
+.container {
+  width: min(1000px, 90%);
+  margin: 40px auto;
+  background: var(--surface);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* -------------------------------------------------
+   Footer
+--------------------------------------------------- */
+footer {
+  margin-top: 60px;
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+/* -------------------------------------------------
+   Mobile
+--------------------------------------------------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+  nav ul {
+    gap: 16px;
+  }
+  .container {
+    padding: 25px;
+  }
+}

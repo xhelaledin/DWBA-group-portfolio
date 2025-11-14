@@ -1,0 +1,53 @@
+.profile-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 14px rgba(74, 144, 226, 0.25);
+}
+
+/* Social links */
+.about-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #fff;
+  background: #222;
+  border-radius: var(--radius);
+  transition: 0.25s ease;
+}
+
+.about-link:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* .skill-item,
+.skills-list {
+  /* same as your old styles but cleaner 
+} */
+
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .profile-pic {
+    margin: 0 auto;
+  }
+}
