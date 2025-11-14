@@ -1,0 +1,411 @@
+/* --- Global Styles & Dark Theme --- */
+:root {
+    --bg-color: #121212;
+    --surface-color: #1E1E1E;
+    --primary-color: #4A90E2;
+    --primary-hover: #7BB9FF;
+    --text-primary: #E0E0E0;
+    --text-secondary: #AAAAAA;
+    --border-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.7;
+    /* Added from reference for font */
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #181818 0%, #232323 100%);
+}
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* --- Header & Glassmorphism Navigation --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Needs to be above portfolio cards */
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(29, 29, 31, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+header nav ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- Main Content Card --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+main {
+    padding: 40px;
+}
+
+main h2 {
+    font-size: 2.2em;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* --- Profile "About" Section --- */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+}
+
+/* Social Links from Reference */
+.about-links {
+  display: flex;
+  gap: 1.5rem; /* Slightly reduced gap */
+  margin-top: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #222;
+  border: 1px solid #fff;
+  border-radius: 14px;
+  padding: 0.8rem 1.6rem 0.8rem 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.about-link i {
+  font-size: 2rem;
+  min-width: 2rem;
+  transition: filter 0.3s;
+  filter: drop-shadow(0 0 2px #fff2);
+}
+
+.about-link:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px) scale(1.04);
+}
+
+/* --- REQUIREMENT: Table (Dark Mode) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+table th,
+table td {
+    border-bottom: 1px solid var(--border-color);
+    padding: 14px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-size: 1.1em;
+}
+
+table tbody tr {
+    background-color: #2C2C2C;
+    transition: background-color 0.2s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--surface-color);
+}
+
+table tbody tr:hover {
+    background-color: #383838;
+}
+
+
+/* --- Projects Section (From Reference) --- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width */
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.portfolio-card {
+  background: linear-gradient(135deg, #181818 80%, #222 100%);
+  border: 2px solid #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) brightness(0.85);
+  transition: filter 0.4s, transform 0.4s;
+}
+
+.portfolio-card:hover img {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.card-desc {
+  font-size: 1.05rem;
+  color: #ccc;
+  margin-bottom: 1.1rem;
+}
+
+.card-tags {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-top: auto; /* Pushes tags to the bottom */
+}
+
+.card-tags span {
+  background: #fff;
+  color: #111;
+  border-radius: 8px;
+  padding: 0.3em 0.9em;
+  font-size: 0.98em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 0.2em;
+  transition: background 0.3s, color 0.3s;
+}
+
+.portfolio-card:hover .card-tags span {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* --- Skills Section (From Reference) --- */
+/* This replaces the old checkmark list */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  list-style-type: none; /* Remove default list-style */
+  padding-left: 0; /* Remove default padding */
+}
+
+.skill-item {
+  background: #222;
+  border: 1px solid #fff;
+  border-radius: 14px;
+  padding: 1.1rem 2.1rem 1.1rem 1.1rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  min-width: 180px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.skill-item:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-4px) scale(1.04);
+}
+
+.skill-item i {
+  font-size: 2.1rem;
+  min-width: 2.1rem;
+  transition: filter 0.3s;
+  filter: drop-shadow(0 0 2px #fff2);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Stack profile pic on top */
+    }
+
+    .profile-pic {
+        max-width: 250px;
+        margin: 0 auto 20px auto; /* Center the profile pic */
+        display: block;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    header nav ul {
+        justify-content: center;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    main {
+        padding: 25px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
