@@ -39,8 +39,9 @@
   display: inline-block;
   padding: 1rem 3rem;
   background: var(--accent);
-  color: var(--text-main);
+  color: #fff;
   border-radius: 50px;
+  text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -52,6 +53,7 @@
   transform: translateY(-3px);
   background: var(--accent-hover);
   box-shadow: 0 15px 40px rgba(74, 144, 226, 0.3);
+  color: #fff;
 }
 
 /* About Section */
@@ -68,7 +70,7 @@
 .about-content {
   max-width: 1000px;
   margin: 0 auto;
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn .5s ease-out;
 }
 
 .about-content img {
