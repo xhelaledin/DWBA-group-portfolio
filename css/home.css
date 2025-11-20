@@ -1,34 +1,31 @@
-/* Hero Section */
+/* ------------------------------
+   HERO SECTION
+--------------------------------*/
 .hero {
   text-align: center;
-  padding: 8rem 5% 6rem;
+  padding: 9rem 5% 6rem;
   color: var(--text-main);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
   animation: fadeIn 1s ease-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
+  letter-spacing: -1px;
   margin-bottom: 1.5rem;
-  animation: fadeIn 1s ease-out 0.2s backwards;
 }
 
 .hero p {
-  font-size: 1.3rem;
-  max-width: 700px;
+  font-size: 1.25rem;
+  max-width: 650px;
   margin: 0 auto 2.5rem;
   color: var(--text-muted);
-  animation: fadeIn 1s ease-out 0.4s backwards;
+  line-height: 1.7;
 }
 
 .hero-btn {
@@ -39,49 +36,47 @@
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  font-size: 1.15rem;
+  transition: 0.3s ease;
   box-shadow: var(--shadow);
-  animation: fadeIn 1s ease-out 0.6s backwards;
 }
 
 .hero-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   background: var(--accent-hover);
-  box-shadow: 0 15px 40px rgba(74, 144, 226, 0.3);
-  color: #fff;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* About Section */
+/* ------------------------------
+   ABOUT SECTION
+--------------------------------*/
 .about {
   background: var(--surface);
   padding: 5rem 5%;
+  margin-top: -2rem;
   border-radius: var(--radius) var(--radius) 0 0;
-  margin-top: -30px;
-  position: relative;
   border: 1px solid var(--border);
   border-bottom: none;
 }
 
 .about-content {
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto;
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
 .about-content img {
   width: 100%;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
   border-radius: var(--radius);
   margin-bottom: 2rem;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
-  border: 1px solid var(--border);
+  transition: 0.35s ease;
 }
 
 .about-content img:hover {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .about-content p {
@@ -91,19 +86,20 @@
   line-height: 1.8;
 }
 
-/* Focus Section */
+/* ------------------------------
+   FOCUS SECTION
+--------------------------------*/
 .focus {
   background: var(--surface);
-  padding: 4rem 5% 6rem;
+  padding: 5rem 5% 7rem;
   text-align: center;
   border-left: 1px solid var(--border);
   border-right: 1px solid var(--border);
 }
 
 .focus h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--text-main);
+  font-size: 2.6rem;
+  margin-bottom: 3.2rem;
   position: relative;
   display: inline-block;
 }
@@ -113,62 +109,165 @@
   position: absolute;
   bottom: -10px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
+  width: 80px;
   height: 4px;
   background: var(--accent);
-  border-radius: 2px;
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
+
+.focus-grid {
+  max-width: 700px;
+  margin: auto;
 }
 
 .focus-card {
-  max-width: 600px;
-  margin: 0 auto;
   padding: 3rem;
   background: linear-gradient(
-    135deg,
+    140deg,
     var(--accent) 0%,
     var(--accent-hover) 100%
   );
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
   animation: fadeIn 1s ease-out;
 }
 
 .focus-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(74, 144, 226, 0.4);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2);
 }
 
 .icon-svg {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   fill: white;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
 }
 
 .focus-card p {
   color: white;
   font-size: 1.3rem;
   font-weight: 500;
+  margin-top: 0.5rem;
 }
 
-/* Responsive */
+/* ------------------------------
+   SERVICES SECTION
+--------------------------------*/
+.services {
+  background: var(--surface);
+  padding: 5rem 5% 6rem;
+  text-align: center;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+}
+
+.services h2 {
+  font-size: 2.6rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  display: inline-block;
+  color: var(--text-main);
+}
+
+.services h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 70px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+  animation: fadeIn 0.7s ease-out;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+  border-color: var(--accent);
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.service-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: white;
+}
+
+.service-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   ANIMATIONS
+--------------------------------*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------
+   RESPONSIVE
+--------------------------------*/
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
-
+  .about-content img {
+    height: 250px;
+  }
   .focus h2 {
     font-size: 2rem;
-  }
-
-  .focus-card {
-    padding: 2rem;
   }
 }
