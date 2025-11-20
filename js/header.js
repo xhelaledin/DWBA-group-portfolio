@@ -23,7 +23,7 @@ function highlightActiveLink() {
   const currentPage = window.location.pathname.split("/").pop(); // e.g. "members.html"
   const links = document.querySelectorAll("nav ul li a");
 
-  links.forEach(link => {
+  links.forEach((link) => {
     const linkPage = link.getAttribute("href");
 
     if (linkPage === currentPage) {

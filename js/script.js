@@ -1,3 +1,3 @@
-import { loadHeaderAndHero } from './header.js';
+import { loadHeaderAndHero } from "./header.js";
 
 loadHeaderAndHero();
