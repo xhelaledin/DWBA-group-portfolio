@@ -1,0 +1,118 @@
+/* ------------------------------
+   PRICING SECTION
+--------------------------------*/
+.pricing {
+  background: var(--surface);
+  padding: 5rem 5% 7rem;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2.6rem;
+  margin-bottom: 3.5rem;
+  color: var(--text-main);
+  position: relative;
+}
+
+.pricing h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 70px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.price-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.price {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.price-card ul li {
+  margin: 0.6rem 0;
+  color: var(--text-muted);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.price-card ul li::before {
+  content: "✔";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+
+.price-btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.price-btn:hover {
+  background: var(--accent-hover);
+}
+
+.popular {
+  border-color: var(--accent);
+  box-shadow: 0 0 25px rgba(74, 144, 226, 0.5);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--accent);
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+}
