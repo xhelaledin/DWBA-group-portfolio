@@ -18,11 +18,7 @@ export function loadHeaderAndHero() {
         
         <!-- Auth Action Container -->
         <div id="auth-action-container">
-          ${
-            isLoggedIn 
-            ? getAvatarHTML(storedUser) 
-            : getLoginButtonHTML()
-          }
+          ${isLoggedIn ? getAvatarHTML(storedUser) : getLoginButtonHTML()}
         </div>
       </nav>
     </header>
@@ -40,7 +36,6 @@ export function loadHeaderAndHero() {
           </div>
           <div>
             <h2>Welcome Back</h2>
-            <!-- Updated font style to match Register view -->
             <p class="w-full text-[#E0E0E0] text-lg font-normal text-wrap" style="margin-bottom:15px; line-height:1.4;">
               Sign in to access your account.
             </p>
@@ -198,7 +193,6 @@ function initAuthLogic(isLoggedIn) {
         window.location.reload();
       });
     }
-
   } else {
     // --- USER IS LOGGED OUT ---
     const triggerBtn = document.getElementById("login-trigger");
@@ -271,20 +265,29 @@ function initAuthLogic(isLoggedIn) {
 }
 
 function validateAndLogin(email, password, overlay) {
-  let capitalCount = 0, digitCount = 0, specialCount = 0;
+  let capitalCount = 0,
+    digitCount = 0,
+    specialCount = 0;
   for (let ch of password) {
-    if (ch >= 'A' && ch <= 'Z') capitalCount++;
-    else if (ch >= '0' && ch <= '9') digitCount++;
-    else if (ch >= 'a' && ch <= 'z') {}
-    else specialCount++;
+    if (ch >= "A" && ch <= "Z") capitalCount++;
+    else if (ch >= "0" && ch <= "9") digitCount++;
+    else if (ch >= "a" && ch <= "z") {
+    } else specialCount++;
   }
 
-  if (password.length >= 8 && capitalCount >= 2 && digitCount >= 1 && specialCount >= 1) {
+  if (
+    password.length >= 8 &&
+    capitalCount >= 2 &&
+    digitCount >= 1 &&
+    specialCount >= 1
+  ) {
     localStorage.setItem("loggedInUser", email);
     overlay.classList.remove("open");
     alert("Welcome, " + email + "!");
     window.location.reload();
   } else {
-    alert("Password invalid! Requirements:\n- 8+ chars\n- 2 uppercase\n- 1 digit\n- 1 special char");
+    alert(
+      "Password invalid! Requirements:\n- 8+ chars\n- 2 uppercase\n- 1 digit\n- 1 special char"
+    );
   }
 }

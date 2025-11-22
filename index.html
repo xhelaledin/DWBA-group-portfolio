@@ -17,8 +17,7 @@
         <h1>Welcome to Our Group Portfolio</h1>
         <p>
           We are a team of passionate developers showcasing our skills in
-          modern, responsive web design — built with clean HTML, CSS, and
-          creativity.
+          modern, responsive web design. <br> <strong>Explore our projects and get to know us</strong>
         </p>
         <a href="members.html" class="hero-btn">Meet the Members</a>
       </div>
@@ -28,8 +27,9 @@
     <section class="about">
       <div class="about-content">
         <img
-          src="https://via.placeholder.com/1200x380.png?text=Our+Team"
+          src="https://aftonkuriren.se/wp-content/uploads/2025/09/swedenkosovo.png"
           alt="Team Banner"
+          class="img-banner"
         />
 
         <p>
@@ -51,14 +51,8 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 
-              10-4.48 10-10S17.52 2 12 2zm-1 
-              17.07c-3.23-.47-5.79-3.03-6.26-6.26H5v-1.62H4.74c.47-3.23 
-              3.03-5.79 6.26-6.26V5h1.62v.48c3.23.47 
-              5.79 3.03 6.26 6.26H19v1.62h-.48c-.47 
-              3.23-3.03 5.79-6.26 6.26V19H11v-.93z"
-            />
+            <path d="M7 4h10v2H7z" />
+            <path d="M5 8h14v12H5z" />
           </svg>
 
           <p>Modern, clean, and accessible products.</p>
@@ -133,7 +127,7 @@
     <section class="contact-section">
       <div class="contact-container">
         <h2>Contact Us</h2>
-        
+
         <!-- State 1: Guest (Not Logged In) -->
         <div id="contact-guest-view" class="contact-state">
           <p>You must be a registered member to send us a message.</p>
@@ -143,20 +137,40 @@
         </div>
 
         <!-- State 2: Member (Logged In) -->
-        <div id="contact-member-view" class="contact-state" style="display: none;">
-          <p>Hello <span id="contact-username" style="color:var(--ref-blue); font-weight:bold;">User</span>! How can we help you today?</p>
-          
+        <div
+          id="contact-member-view"
+          class="contact-state"
+          style="display: none"
+        >
+          <p>
+            Hello
+            <span
+              id="contact-username"
+              style="color: var(--ref-blue); font-weight: bold"
+              >User</span
+            >! How can we help you today?
+          </p>
+
           <form id="contact-form">
             <div class="form-group">
-              <input type="text" id="msg-subject" placeholder="Subject" required />
+              <input
+                type="text"
+                id="msg-subject"
+                placeholder="Subject"
+                required
+              />
             </div>
             <div class="form-group">
-              <textarea id="msg-content" rows="5" placeholder="Write your message here..." required></textarea>
+              <textarea
+                id="msg-content"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
             </div>
             <button type="submit" class="contact-btn">Send Message</button>
           </form>
         </div>
-
       </div>
     </section>
 
