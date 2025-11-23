@@ -1,58 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
-    <title>Group Project Home</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Our Group Portfolio</title>
+  </head>
 
-    <header>
-        <h1>Our Group</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="member1.html">Jane Doe</a></li>
-                <li><a href="member2.html">John Smith</a></li>
-            </ul>
-        </nav>
-    </header>
+  <body>
+    <div id="header"></div>
 
-    <div class="container">
-        <main>
-            <h2>Welcome to Our Modern Team Page!</h2>
-            <p>
-                We are a team of two passionate developers demonstrating our web development skills.
-                This site is built with semantic HTML5 and styled using modern CSS, including
-                a responsive, dark-mode design.
-            </p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Welcome to Our Group Portfolio</h1>
+        <p>
+          We are a team of passionate developers showcasing our skills in
+          modern, responsive web design. <br> <strong>Explore our projects and get to know us</strong>
+        </p>
+        <a href="members.html" class="hero-btn">Meet the Members</a>
+      </div>
+    </section>
 
-            <img src="https://via.placeholder.com/920x300.png?text=Modern+Team+Banner" alt="A modern banner for our team">
-            
-            <p style="margin-top: 20px;">
-                Explore our individual profiles to learn more about our skills, projects, and contributions.
-                You can navigate to each member's page using the links in the header.
-            </p>
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <img
+          src="https://aftonkuriren.se/wp-content/uploads/2025/09/swedenkosovo.png"
+          alt="Team Banner"
+          class="img-banner"
+        />
 
-            <div>
-                <h3>Our Core Focus</h3>
-                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <title>Web Development Icon</title>
-                    <path d="M21,11H16.54C16.19,10.13 15.67,9.33 15,8.65L18.39,5.26C18.78,4.87 18.78,4.24 18.39,3.85L17.15,2.61C16.76,2.22 16.13,2.22 15.74,2.61L12.35,6C11.67,5.33 10.87,4.81 10,4.46V3C10,2.45 9.55,2 9,2H7C6.45,2 6,2.45 6,3V4.46C5.13,4.81 4.33,5.33 3.65,6L0.26,2.61C-0.13,2.22 -0.13,1.59 0.26,1.2L1.5,0.26C1.89,-0.13 2.52,-0.13 2.91,0.26L6.3,3.65C7,2.97 7.8,2.45 8.65,2.11V1H11.35V2.11C12.2,2.45 13,2.97 13.7,3.65L17.09,0.26C17.48,-0.13 18.11,-0.13 18.5,0.26L19.74,1.5C20.13,1.89 20.13,2.52 19.74,2.91L16.35,6.3C17.03,7 17.55,7.8 17.89,8.65H19V11.35H17.89C17.55,12.2 17.03,13 16.35,13.7L19.74,17.09C20.13,17.48 20.13,18.11 19.74,18.5L18.5,19.74C18.11,20.13 17.48,20.13 17.09,19.74L13.7,16.35C13,17.03 12.2,17.55 11.35,17.89V19H8.65V17.89C7.8,17.55 7,17.03 6.3,16.35L2.91,19.74C2.52,20.13 1.89,20.13 1.5,19.74L0.26,18.5C-0.13,18.11 -0.13,17.48 0.26,17.09L3.65,13.7C2.97,13 2.45,12.2 2.11,11.35H1V8.65H2.11C2.45,7.8 2.97,7 3.65,6.3L0.26,2.91Z" />
-                </svg>
+        <p>
+          Explore our individual pages to learn more about our experience,
+          strengths, and contributions to this collaborative project. Use the
+          navigation menu above to discover each member.
+        </p>
+      </div>
+    </section>
+
+    <!-- Focus Section -->
+    <section class="focus">
+      <h2>Our Core Focus</h2>
+
+      <div class="focus-grid">
+        <div class="focus-card">
+          <svg
+            class="icon-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 4h10v2H7z" />
+            <path d="M5 8h14v12H5z" />
+          </svg>
+
+          <p>Modern, clean, and accessible products.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <h2>What We Build</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 4h18v12H3z"></path>
+              <path d="M2 18h20v2H2z"></path>
+            </svg>
+          </div>
+          <h3>Websites</h3>
+          <p>
+            Modern, responsive, and optimized websites — built with clean HTML,
+            CSS, and JavaScript frameworks.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 4h10v2H7z"></path>
+              <path d="M5 8h14v12H5z"></path>
+            </svg>
+          </div>
+          <h3>Web Applications</h3>
+          <p>
+            Interactive and dynamic web apps with robust frontend and backend
+            logic.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h16v16H4z"></path>
+              <path d="M9 9h6v6H9z" fill="none" stroke-width="1"></path>
+            </svg>
+          </div>
+          <h3>Databases</h3>
+          <p>
+            We build and manage structured databases using SQL & NoSQL
+            technologies.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l4 4-4 4-4-4z"></path>
+              <path d="M12 14l4 4-4 4-4-4z"></path>
+            </svg>
+          </div>
+          <h3>APIs & Backend</h3>
+          <p>
+            Secure, efficient API design and backend logic for real
+            applications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW Contact Section -->
+    <section class="contact-section">
+      <div class="contact-container">
+        <h2>Contact Us</h2>
+
+        <!-- State 1: Guest (Not Logged In) -->
+        <div id="contact-guest-view" class="contact-state">
+          <p>You must be a registered member to send us a message.</p>
+          <button id="contact-login-trigger" class="contact-btn">
+            Log In to Write
+          </button>
+        </div>
+
+        <!-- State 2: Member (Logged In) -->
+        <div
+          id="contact-member-view"
+          class="contact-state"
+          style="display: none"
+        >
+          <p>
+            Hello
+            <span
+              id="contact-username"
+              style="color: var(--ref-blue); font-weight: bold"
+              >User</span
+            >! How can we help you today?
+          </p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="msg-subject"
+                placeholder="Subject"
+                required
+              />
             </div>
-        </main>
-    </div>
+            <div class="form-group">
+              <textarea
+                id="msg-content"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="contact-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Group Project. All rights reserved.</p>
-        <p>This project was created for our course at <a href="https://www.example.edu" target="_blank">Example University</a>.</p>
+    <footer class="footer">
+      <p>&copy; 2025 Group Project. All rights reserved.</p>
+      <p>
+        Created for the course
+        <strong>"Development of Web Based Applications"</strong> at
+        <a
+          href="https://lnu.se/en/course/development-of-web-based-applications/vaxjo-exchange-part-time-autumn/"
+          target="_blank"
+          >Linnaeus University</a
+        >.
+      </p>
     </footer>
 
-</body>
+    <script type="module" src="js/script.js"></script>
+  </body>
 </html>
