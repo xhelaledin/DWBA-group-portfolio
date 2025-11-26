@@ -32,7 +32,6 @@
 .tab-content.active {
   display: block;
 }
-/* */
 
 /* Profile Section */
 .profile-grid {
@@ -102,7 +101,6 @@ table tr:hover {
   background: #222;
 }
 
-/* Portfolio Grid Fix */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

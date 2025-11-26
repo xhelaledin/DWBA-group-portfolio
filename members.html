@@ -8,14 +8,15 @@
     <title>Our Team</title>
   </head>
   <body>
-    <div id="header">
-      <!-- Header will be loaded here via JavaScript (script.js <- header.js) -->
-    </div>
+    <div id="header"></div>
+
+    <!-- Switcher Tabs for the team members -->
     <div class="team-tabs">
       <button class="tab-btn active" data-tab="enes">Enes Gjurgjiali</button>
       <button class="tab-btn" data-tab="xhela">Xhelaledin Bakiç</button>
     </div>
 
+    <!-- Enes Gjurgjiali Tab -->
     <div class="tab-content active" id="enes">
       <div class="container">
         <main>
@@ -126,7 +127,11 @@
               </div>
             </a>
 
-            <a href="https://duarte.devops99.pro/" class="portfolio-card" target="_blank">
+            <a
+              href="https://duarte.devops99.pro/"
+              class="portfolio-card"
+              target="_blank"
+            >
               <div class="portfolio-img-wrap">
                 <img
                   src="https://enesgj.netlify.app/_next/image?url=%2Fportfolio%2Fduarte.webp&w=3840&q=75"
@@ -147,7 +152,11 @@
               </div>
             </a>
 
-            <a href="https://enesdevportfolio-ios.netlify.app/" class="portfolio-card" target="_blank">
+            <a
+              href="https://enesdevportfolio-ios.netlify.app/"
+              class="portfolio-card"
+              target="_blank"
+            >
               <div class="portfolio-img-wrap">
                 <img
                   src="https://enesgj.netlify.app/_next/image?url=%2Fportfolio%2Fapple.webp&w=3840&q=75"
@@ -168,7 +177,11 @@
               </div>
             </a>
 
-            <a href="https://enes-cmarine.netlify.app/" class="portfolio-card" target="_blank">
+            <a
+              href="https://enes-cmarine.netlify.app/"
+              class="portfolio-card"
+              target="_blank"
+            >
               <div class="portfolio-img-wrap">
                 <img
                   src="https://enesgj.netlify.app/_next/image?url=%2Fportfolio%2Fcinemarine.webp&w=3840&q=75"
@@ -189,7 +202,11 @@
               </div>
             </a>
 
-            <a href="https://qk11marsi.netlify.app/" class="portfolio-card" target="_blank">
+            <a
+              href="https://qk11marsi.netlify.app/"
+              class="portfolio-card"
+              target="_blank"
+            >
               <div class="portfolio-img-wrap">
                 <img
                   src="https://enesgj.netlify.app/_next/image?url=%2Fportfolio%2Fqk-11.webp&w=3840&q=75"
@@ -247,6 +264,7 @@
       </div>
     </div>
 
+    <!-- Xhelaledin Bakiç Tab -->
     <div class="tab-content" id="xhela">
       <div class="container">
         <main>
@@ -261,7 +279,10 @@
             <div>
               <h2>Xhelaledin Bakiç</h2>
               <p>
-                I’m a Computer Science student specializing in Android development, building interactive mobile apps with Android Studio and Unity. I focus on creating smooth, engaging experiences that bring ideas to life on mobile platforms.
+                I’m a Computer Science student specializing in Android
+                development, building interactive mobile apps with Android
+                Studio and Unity. I focus on creating smooth, engaging
+                experiences that bring ideas to life on mobile platforms.
               </p>
               <div class="about-links">
                 <a
@@ -307,7 +328,11 @@
                 </div>
               </div>
             </a>
-            <a href="https://github.com/xhelaledin/RobotArmControl" class="portfolio-card" target="_blank">
+            <a
+              href="https://github.com/xhelaledin/RobotArmControl"
+              class="portfolio-card"
+              target="_blank"
+            >
               <div class="portfolio-img-wrap">
                 <img
                   src="Images\robotarmcontrol.png"
@@ -318,7 +343,8 @@
               <div class="card-content">
                 <div class="card-title">Robot Arm Control App</div>
                 <div class="card-desc">
-                  Unity-based Android app for real-time robot arm control with 3D visualization and encrypted Bluetooth communication.
+                  Unity-based Android app for real-time robot arm control with
+                  3D visualization and encrypted Bluetooth communication.
                 </div>
                 <div class="card-tags">
                   <span>Unity</span>
@@ -367,9 +393,11 @@
 
       tabButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
+          // Get the target tab content ID from the button's data attribute
           const tab = btn.dataset.tab;
 
           tabButtons.forEach((b) => b.classList.remove("active"));
+          // Add active class to the clicked tab button
           btn.classList.add("active");
 
           tabContents.forEach((c) => c.classList.remove("active"));

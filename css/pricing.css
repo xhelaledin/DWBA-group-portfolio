@@ -1,12 +1,10 @@
-/* ------------------------------
-   PRICING SECTION
---------------------------------*/
 .pricing {
   background: var(--surface);
   padding: 5rem 5% 7rem;
   border-left: 1px solid var(--border);
   border-right: 1px solid var(--border);
   text-align: center;
+  margin-top: 2rem;
 }
 
 .pricing h2 {

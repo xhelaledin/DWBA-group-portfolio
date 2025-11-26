@@ -1,18 +1,24 @@
 // HTML Template Functions for Header Component
-
 export function getHeaderHTML(isLoggedIn, userEmail) {
   return `
     <header>
       <h1><a href="index.html">The Albanians in Sweden</a></h1>
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="members.html">Our Team</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-        </ul>
-        
-        <div id="auth-action-container">
-          ${isLoggedIn ? getAvatarHTML(userEmail) : getLoginButtonHTML()}
+        <button class="hamburger-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Our Team</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+          
+          <div id="auth-action-container" class="nav-auth">
+            ${isLoggedIn ? getAvatarHTML(userEmail) : getLoginButtonHTML()}
+          </div>
         </div>
       </nav>
     </header>
@@ -105,7 +111,7 @@ function getLoginButtonHTML() {
 }
 
 function getAvatarHTML(email) {
-  const firstLetter = email ? email.charAt(0).toUpperCase() : "U";
+  const firstLetter = email ? email.charAt(0).toUpperCase() : "U"; // U = User
   return `
     <div class="avatar-wrapper">
       <div id="user-avatar" class="user-profile-circle" title="${email}">

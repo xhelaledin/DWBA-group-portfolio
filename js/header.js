@@ -1,19 +1,54 @@
 import { getHeaderHTML } from "./header-templates.js";
 
-// Main function to load header and initialize authentication logic
 export function loadHeaderAndHero() {
   const header = document.getElementById("header");
 
-  // Check login state
+  // Check if user is logged in
   const storedUser = localStorage.getItem("loggedInUser");
-  const isLoggedIn = !!storedUser;
+  const isLoggedIn = !!storedUser; //We want a boolean value here so we use the double negation operator [!!]
 
-  // Render header HTML using templates
+  // (header-templates.js)
   header.innerHTML = getHeaderHTML(isLoggedIn, storedUser);
 
   // Initialize navigation and authentication logic
   highlightActiveLink();
   initAuthLogic(isLoggedIn);
+  initHamburgerMenu();
+}
+
+// Mobile responsive hamburger menu
+function initHamburgerMenu() {
+  const hamburgerBtn = document.querySelector(".hamburger-btn");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener("click", () => {
+      hamburgerBtn.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close menu when clicking on links or auth buttons
+    const navLinks = navMenu.querySelectorAll("a");
+    const authButtons = navMenu.querySelectorAll("button");
+
+    [...navLinks, ...authButtons].forEach((element) => {
+      element.addEventListener("click", () => {
+        // Don't close menu when clicking login trigger (it opens modal)
+        if (element.id !== "login-trigger" && element.id !== "user-avatar") {
+          hamburgerBtn.classList.remove("active");
+          navMenu.classList.remove("active");
+        }
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!hamburgerBtn.contains(e.target) && !navMenu.contains(e.target)) {
+        hamburgerBtn.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    });
+  }
 }
 
 // Highlight the active navigation link based on current page
